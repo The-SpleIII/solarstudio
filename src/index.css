@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Кастомные анимации и стили (скопируйте из оригинала) */
+@keyframes float {
+  /* … */
+}
+@keyframes spin-slow {
+  /* … */
+}
+/* и т.д. */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0; /* растягиваем на весь экран */
+  z-index: -1; /* под контентом */
+  background-image: url("./img/icons-bg.svg");
+  background-size: 200px; /* масштаб плитки */
+  background-repeat: repeat;
+  opacity: 0.35; /* общая прозрачность */
+  pointer-events: none; /* клики проходят сквозь */
+}
+@keyframes drift {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(-10px, -10px);
+  }
+}
+
+body::before {
+  animation: drift 40s linear infinite alternate;
+}
