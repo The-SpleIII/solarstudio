@@ -24,7 +24,6 @@ import Services from "./components/Services.vue";
 import Reviews from "./components/Reviews.vue";
 import Footer from "./components/Footer.vue";
 import ModalProduct from "./components/ModalProduct.vue";
-import ServiceCard from "./components/ServiceCard.vue";
 const showProducts = ref(false);
 const modalProduct = ref(null);
 
