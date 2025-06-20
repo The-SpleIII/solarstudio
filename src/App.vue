@@ -1,6 +1,5 @@
 <template>
   <div class="min-h-screen overflow-hidden relative">
-    <IconField />
     <Header />
     <Hero @open-products="showProducts = true" />
     <Products @select="openModal" />
